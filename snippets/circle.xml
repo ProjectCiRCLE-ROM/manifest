@@ -10,10 +10,29 @@
 
   <!-- Forked projects -->
   <remove-project name="LineageOS/android" />
+  <remove-project name="LineageOS/android_build" />
+  <remove-project name="LineageOS/android_build_soong" />
+  <remove-project name="LineageOS/android_device_generic_common" />
+  <remove-project name="LineageOS/android_lineage-sdk" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <remove-project name="LineageOS/android_vendor_lineage" />
 
   <!-- Our repos -->
+  <project name="build_make" path="build/make" remote="circle" groups="pdk,sysui-studio">
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project name="build_soong" path="build/soong" remote="circle" groups="pdk,tradefed,sysui-studio" />
+  <project name="device_generic_common" path="device/generic/common" remote="circle" groups="pdk" />
   <project name="external_devshell" path="external/devshell" remote="circle">
     <linkfile src="toplevel.envrc" dest=".envrc" />
   </project>
   <project name="manifest" path="android" remote="circle" />
+  <project name="lineage-sdk" path="lineage-sdk" remote="circle" />
+  <project name="packages_apps_Settings" path="packages/apps/Settings" remote="circle" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+  <project name="vendor_circle" path="vendor/circle" remote="circle" />
 </manifest>
