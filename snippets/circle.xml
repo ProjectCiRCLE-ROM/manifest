@@ -1,0 +1,19 @@
+<manifest>
+  <!-- Remotes used -->
+  <remote name="circle"
+          fetch="https://github.com/ProjectCiRCLE-ROM"
+          revision="16.2" />
+
+  <remote name="circling-devices"
+          fetch="https://github.com/CiRCLING-Devices"
+          revision="16.2" />
+
+  <!-- Forked projects -->
+  <remove-project name="LineageOS/android" />
+
+  <!-- Our repos -->
+  <project name="external_devshell" path="external/devshell" remote="circle">
+    <linkfile src="toplevel.envrc" dest=".envrc" />
+  </project>
+  <project name="manifest" path="android" remote="circle" />
+</manifest>
