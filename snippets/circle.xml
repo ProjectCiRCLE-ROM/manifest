@@ -20,6 +20,9 @@
   <remove-project name="LineageOS/android_device_generic_common" />
   <remove-project name="LineageOS/android_device_lineage_sepolicy" />
   <remove-project name="LineageOS/android_external_bash" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <remove-project name="LineageOS/android_frameworks_native" />
+  <remove-project name="LineageOS/android_frameworks_opt_telephony" />
   <remove-project name="LineageOS/android_lineage-sdk" />
   <remove-project name="LineageOS/android_packages_apps_LineageParts" />
   <remove-project name="LineageOS/android_packages_apps_Settings" />
@@ -44,6 +47,9 @@
   <project name="external_devshell" path="external/devshell" remote="circle">
     <linkfile src="toplevel.envrc" dest=".envrc" />
   </project>
+  <project name="frameworks_base" path="frameworks/base" remote="circle" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <project name="frameworks_native" path="frameworks/native" remote="circle" groups="pdk" />
+  <project name="frameworks_opt_telephony" path="frameworks/opt/telephony" remote="circle" groups="pdk,sysui-studio" />
   <project name="manifest" path="android" remote="circle" />
   <project name="lineage-sdk" path="lineage-sdk" remote="circle" />
   <project name="packages_apps_LineageParts" path="packages/apps/LineageParts" remote="circle" />
