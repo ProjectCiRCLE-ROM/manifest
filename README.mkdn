@@ -52,6 +52,18 @@ Finally, to start building:
 m live
 ```
 
+Flags
+-----
+
+There are flags you can use to customize your build however you like.
+
+To label your builds as experimental, alpha or beta:
+```
+CIRCLE_BUILDTYPE := EXPERIMENTAL | ALPHA | BETA
+```
+
+The builds are labeled unofficial by default.
+
 Credits
 -------
 
