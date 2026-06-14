@@ -14,6 +14,7 @@
   <remove-project name="LineageOS/android_build" />
   <remove-project name="LineageOS/android_build_soong" />
   <remove-project name="LineageOS/android_device_generic_common" />
+  <remove-project name="LineageOS/android_device_lineage_sepolicy" />
   <remove-project name="LineageOS/android_external_bash" />
   <remove-project name="LineageOS/android_lineage-sdk" />
   <remove-project name="LineageOS/android_packages_apps_LineageParts" />
@@ -34,6 +35,7 @@
   </project>
   <project name="build_soong" path="build/soong" remote="circle" groups="pdk,tradefed,sysui-studio" />
   <project name="device_generic_common" path="device/generic/common" remote="circle" groups="pdk" />
+  <project name="device_lineage_sepolicy" path="device/lineage/sepolicy" remote="circle" />
   <project name="external_bash" path="external/bash" remote="circle" />
   <project name="external_devshell" path="external/devshell" remote="circle">
     <linkfile src="toplevel.envrc" dest=".envrc" />
