@@ -8,6 +8,10 @@
           fetch="https://github.com/CiRCLING-Devices"
           revision="16.2" />
 
+  <remote name="circle-gitea"
+          fetch="https://gitea.com/ProjectCiRCLE-ROM"
+          revision="16.2" />
+
   <!-- Forked projects -->
   <remove-project name="LineageOS/android" />
   <remove-project name="LineageOS/android_bootable_recovery" />
@@ -47,4 +51,5 @@
   <project name="packages_apps_SetupWizard" path="packages/apps/SetupWizard" remote="circle" />
   <project name="system_core" path="system/core" remote="circle" groups="pdk" />
   <project name="vendor_circle" path="vendor/circle" remote="circle" />
+  <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
 </manifest>
