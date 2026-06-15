@@ -64,6 +64,11 @@ CIRCLE_BUILDTYPE := EXPERIMENTAL | ALPHA | BETA
 
 The builds are labeled unofficial by default.
 
+To ship Google apps:
+```
+WITH_GMS := true
+```
+
 Credits
 -------
 
