@@ -69,6 +69,13 @@ To ship Google apps:
 WITH_GMS := true
 ```
 
+To set your alias as the maintainer:
+```
+CIRCLE_MAINTAINER := username
+```
+
+Make sure not to use spaces as this is passed to `PRODUCT_PRODUCT_PROPERTIES` as is. If you put space, only the content before first space is taken into consideration.
+
 Credits
 -------
 
