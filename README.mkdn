@@ -85,4 +85,4 @@ Credits
 - **[DivestOS](https://github.com/Divested-Mobile):** Patches to nuke analytics
 - **[Project Sakura](https://github.com/ProjectSakura):** Some design ideas
 - **[Halcyon](https://github.com/halcyonproject):** Specific features
-- **[The Clover Project](https://github.com/The-Clover-Project):** Google Sans fonts (Regular, Clock, Flex, Flex Clock)
+- **[The Clover Project](https://github.com/The-Clover-Project):** Specific features and fonts
