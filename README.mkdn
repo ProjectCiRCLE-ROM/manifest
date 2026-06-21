@@ -76,7 +76,12 @@ To set your alias as the maintainer:
 CIRCLE_MAINTAINER := username
 ```
 
-Make sure not to use spaces as this is passed to `PRODUCT_PRODUCT_PROPERTIES` as is. If you put space, only the content before first space is taken into consideration.
+Make sure not to use spaces as this is passed to `PRODUCT_PRODUCT_PROPERTIES` as is. If you put space, only the content before first space is taken into consideration, and it will also mess up build.prop, like so:
+```
+# CIRCLE_MAINTAINER := First Last
+ro.circle.maintainer=First
+Last
+```
 
 Credits
 -------
