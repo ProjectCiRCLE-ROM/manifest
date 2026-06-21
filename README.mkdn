@@ -57,12 +57,14 @@ Flags
 
 There are flags you can use to customize your build however you like.
 
-To label your builds as experimental, alpha or beta:
+To label your builds as experimental, alpha, beta or official:
 ```
-CIRCLE_BUILDTYPE := EXPERIMENTAL | ALPHA | BETA
+CIRCLE_BUILDTYPE := EXPERIMENTAL | ALPHA | BETA | OFFICIAL
 ```
 
-The builds are labeled unofficial by default.
+Note that any of these labels other than experimental require signing keys to be present at `vendor/circle-priv/keys`. You can generate your own, of course, but we discourage you from labeling your builds as though they're official. Stick to experimental if your build isn't ready for daily use, or leave it undefined if your build is okay to be used in day to day life.
+
+The builds are labeled unofficial by default (if the variable is empty or has an unrecognized definition).
 
 To ship Google apps:
 ```
