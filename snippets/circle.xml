@@ -21,6 +21,7 @@
   <remove-project name="LineageOS/android_device_lineage_sepolicy" />
   <remove-project name="LineageOS/android_external_bash" />
   <remove-project name="platform/external/bouncycastle" />
+  <remove-project name="LineageOS/android_external_google-fonts_google-sans-flex" />
   <remove-project name="LineageOS/android_frameworks_base" />
   <remove-project name="LineageOS/android_frameworks_native" />
   <remove-project name="LineageOS/android_frameworks_opt_telephony" />
