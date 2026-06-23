@@ -66,5 +66,5 @@
   <project name="packages_apps_Updater" path="packages/apps/Updater" remote="circle" />
   <project name="system_core" path="system/core" remote="circle" groups="pdk" />
   <project name="vendor_circle" path="vendor/circle" remote="circle" />
-  <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
+  <project name="vendor_gapps" path="vendor/gapps" remote="circle-gitea" />
 </manifest>
