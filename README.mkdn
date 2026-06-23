@@ -97,7 +97,7 @@ Credits
 - **[LineageOS](https://github.com/LineageOS):** Base ROM
 - **[halogenOS](https://git.halogenos.org/halogenOS):** Base Nix devshell
 - **[DivestOS](https://github.com/Divested-Mobile):** Patches to nuke analytics
-- **[Project Sakura](https://github.com/ProjectSakura):** Some design ideas
+- **[Project Sakura](https://github.com/ProjectSakura):** Some design ideas and specific features
 - **[Halcyon](https://github.com/halcyonproject):** Specific features
 - **[The Clover Project](https://github.com/The-Clover-Project):** Specific features and fonts
 - **[crDroid](https://github.com/crdroidandroid):** Specific fixes and improvements
