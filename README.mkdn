@@ -83,6 +83,13 @@ ro.circle.maintainer=First
 Last
 ```
 
+If your device has a Mediatek chipset, the following flag might be useful for you:
+```
+PERF_ANIM_OVERRIDE := true
+```
+
+This flag works around a performance regression caused by fixed DP translations and fade animations.
+
 Credits
 -------
 
