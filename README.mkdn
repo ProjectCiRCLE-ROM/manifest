@@ -103,3 +103,4 @@ Credits
 - **[crDroid](https://github.com/crdroidandroid):** Specific fixes and improvements
 - **[AxionOS](https://github.com/AxionAOSP):** Specific fixes and improvements
 - **[LineageOS-Ext](https://github.com/Los-Ext):** Specific fixes and improvements
+- **[Project Infinity-X](https://github.com/ProjectInfinity-X):** GApps suite
