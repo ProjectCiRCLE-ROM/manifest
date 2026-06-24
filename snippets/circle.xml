@@ -69,5 +69,5 @@
   <project name="packages_overlays_Lineage" path="packages/overlays/Lineage" remote="circle" />
   <project name="system_core" path="system/core" remote="circle" groups="pdk" />
   <project name="vendor_circle" path="vendor/circle" remote="circle" />
-  <project name="vendor_gapps" path="vendor/gapps" remote="circle-gitea" />
+  <project name="vendor_google_gms" path="vendor/google/gms" remote="circle-gitea" />
 </manifest>
