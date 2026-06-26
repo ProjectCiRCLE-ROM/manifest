@@ -22,6 +22,7 @@
   <remove-project name="LineageOS/android_external_bash" />
   <remove-project name="platform/external/bouncycastle" />
   <remove-project name="LineageOS/android_external_google-fonts_google-sans-flex" />
+  <remove-project name="LineageOS/android_frameworks_av" />
   <remove-project name="LineageOS/android_frameworks_base" />
   <remove-project name="LineageOS/android_frameworks_native" />
   <remove-project name="LineageOS/android_frameworks_opt_telephony" />
@@ -55,6 +56,7 @@
   <project name="external_devshell" path="external/devshell" remote="circle">
     <linkfile src="toplevel.envrc" dest=".envrc" />
   </project>
+  <project name="frameworks_av" path="frameworks/av" remote="circle" groups="pdk,sysui-studio" />
   <project name="frameworks_base" path="frameworks/base" remote="circle" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
   <project name="frameworks_native" path="frameworks/native" remote="circle" groups="pdk" />
   <project name="frameworks_opt_telephony" path="frameworks/opt/telephony" remote="circle" groups="pdk,sysui-studio" />
