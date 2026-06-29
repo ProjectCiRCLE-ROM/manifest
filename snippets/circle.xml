@@ -14,6 +14,7 @@
 
   <!-- Forked projects -->
   <remove-project name="LineageOS/android" />
+  <remove-project name="LineageOS/android_bionic" />
   <remove-project name="LineageOS/android_bootable_recovery" />
   <remove-project name="LineageOS/android_build" />
   <remove-project name="LineageOS/android_build_soong" />
@@ -40,6 +41,7 @@
   <remove-project name="LineageOS/android_vendor_lineage" />
 
   <!-- Our repos -->
+  <project name="bionic" path="bionic" remote="circle" groups="pdk" />
   <project name="bootable_recovery" path="bootable/recovery" remote="circle" groups="pdk" />
   <project name="build_make" path="build/make" remote="circle" groups="pdk,sysui-studio">
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
