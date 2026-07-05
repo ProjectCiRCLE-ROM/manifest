@@ -39,6 +39,7 @@
   <remove-project name="LineageOS/android_packages_overlays_Lineage" />
   <remove-project name="LineageOS/android_packages_services_Car" />
   <remove-project name="LineageOS/android_system_core" />
+  <remove-project name="platform/system/memory/libmeminfo" />
   <remove-project name="LineageOS/android_system_sepolicy" />
   <remove-project name="LineageOS/android_vendor_lineage" />
 
@@ -79,6 +80,7 @@
   <project name="packages_overlays_Lineage" path="packages/overlays/Lineage" remote="circle" />
   <project name="packages_services_Car" path="packages/services/Car" remote="circle" groups="pdk-cw-fs,pdk-fs" />
   <project name="system_core" path="system/core" remote="circle" groups="pdk" />
+  <project name="system_memory_libmeminfo" path="system/memory/libmeminfo" remote="circle" groups="pdk" />
   <project name="system_sepolicy" path="system/sepolicy" remote="circle" groups="pdk" />
   <project name="vendor_circle" path="vendor/circle" remote="circle" />
   <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
