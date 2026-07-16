@@ -36,6 +36,7 @@
   <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
   <remove-project name="LineageOS/android_packages_apps_Twelve" />
   <remove-project name="LineageOS/android_packages_apps_Updater" />
+  <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
   <remove-project name="LineageOS/android_packages_overlays_Lineage" />
   <remove-project name="LineageOS/android_packages_services_Car" />
   <remove-project name="LineageOS/android_system_core" />
@@ -77,6 +78,7 @@
   <project name="packages_apps_SetupWizard" path="packages/apps/SetupWizard" remote="circle" />
   <project name="packages_apps_Twelve" path="packages/apps/Twelve" remote="circle" />
   <project name="packages_apps_Updater" path="packages/apps/Updater" remote="circle" />
+  <project name="packages_modules_Bluetooth" path="packages/modules/Bluetooth" remote="circle" />
   <project name="packages_overlays_Lineage" path="packages/overlays/Lineage" remote="circle" />
   <project name="packages_services_Car" path="packages/services/Car" remote="circle" groups="pdk-cw-fs,pdk-fs" />
   <project name="system_core" path="system/core" remote="circle" groups="pdk" />
