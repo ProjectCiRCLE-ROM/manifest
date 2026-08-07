@@ -15,7 +15,13 @@
   <remote name="circling-devices-gitea"
 	  fetch="https://gitea.com/CiRCLING-Devices"
 	  revision="16.2" />
-
+  <!-- CharaROM Remote, defined solely for the F-Droid Extension -->
+  <remote name="chararom"
+    fetch="https://github.com/CharaROMAndroid"
+    sync-c="true"
+    sync-j="4"
+    revision="refs/heads/hershey" />
+	
   <!-- Forked projects -->
   <remove-project name="LineageOS/android" />
   <remove-project name="LineageOS/android_bionic" />
@@ -90,4 +96,6 @@
   <project name="system_sepolicy" path="system/sepolicy" remote="circle" groups="pdk" />
   <project name="vendor_circle" path="vendor/circle" remote="circle" />
   <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
+  <!-- CharaROM's F-Droid Privileged Extension -->
+  <project name="F-DroidPrivilegedExtension" path="packages/apps/F-DroidPrivilegedExtension" remote="chararom"/>
 </manifest>
