@@ -90,4 +90,7 @@
   <project name="system_sepolicy" path="system/sepolicy" remote="circle" groups="pdk" />
   <project name="vendor_circle" path="vendor/circle" remote="circle" />
   <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
+
+  <!-- Projects tracked elsewhere -->
+  <project name="CharaROMAndroid/F-DroidPrivilegedExtension" revision="hershey" path="packages/apps/F-DroidPrivilegedExtension" remote="github" />
 </manifest>
