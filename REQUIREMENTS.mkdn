@@ -1,0 +1,19 @@
+Required packages to build Project CiRCLE on major distributions
+================================================================
+
+Ubuntu
+------
+
+Check out the LineageOS build guide for any device to get the required packages.
+
+If you're not sure what device to go for, [here's the page for crackling](https://wiki.lineageos.org/devices/crackling/build).
+
+Fedora
+------
+
+See [this script by axxx007xxxz on GitHub](https://gist.github.com/axxx007xxxz/60fea50f4b123e0163f972d1709068c2).
+
+Arch Linux
+----------
+
+See [halogenOS 14.0 manifest on GitHub](https://github.com/halogenOS/android_manifest/tree/XOS-14.0#arch-builders-ahoy).

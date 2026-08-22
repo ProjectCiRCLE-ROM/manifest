@@ -37,6 +37,9 @@ nix develop path:external/devshell
 
 You have to run this command every time you want to enter the build environment, so you better save it somewhere!
 
+> [!NOTE]
+> If you, for some reason, cannot afford to have Nix on your machine, check out the `REQUIREMENTS.mkdn` file in this repository to get the required packages for your distribution.
+
 After you enter the build environment (or prepare the distro of your choice for building), use the following command to gather the functions required and run the `vendorsetup` scripts from your device trees:
 ```
 source build/envsetup.sh
