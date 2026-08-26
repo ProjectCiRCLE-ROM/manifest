@@ -72,16 +72,14 @@ To ship Google apps:
 WITH_GMS := true
 ```
 
-To set your alias as the maintainer:
+To set your name as the maintainer:
 ```
-CIRCLE_MAINTAINER := username
+CIRCLE_MAINTAINER := Full Name
 ```
 
-Make sure not to use spaces as this is passed to `PRODUCT_PRODUCT_PROPERTIES` as is. If you put space, only the content before first space is taken into consideration, and it will also mess up build.prop, like so:
+You can also specify multiple people! Here's an example:
 ```
-# CIRCLE_MAINTAINER := First Last
-ro.circle.maintainer=First
-Last
+CIRCLE_MAINTAINER := First Maintainer & Second Maintainer
 ```
 
 If your device has a Mediatek chipset, the following flag might be useful for you:
