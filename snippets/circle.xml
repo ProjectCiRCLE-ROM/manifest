@@ -1,0 +1,149 @@
+<manifest>
+  <!-- Remotes used -->
+  <remote name="circle"
+          fetch="https://github.com/ProjectCiRCLE-ROM"
+          revision="17.0" />
+
+  <remote name="circling-devices"
+          fetch="https://github.com/CiRCLING-Devices"
+          revision="17.0" />
+
+  <remote name="circle-gitea"
+          fetch="https://gitea.com/ProjectCiRCLE-ROM"
+          revision="17.0" />
+
+  <remote name="circling-devices-gitea"
+          fetch="https://gitea.com/CiRCLING-Devices"
+          revision="16.2" />
+
+  <!-- Forked projects -->
+  <remove-project name="LineageOS/android" />
+  <remove-project name="LineageOS/android_bionic" />
+  <!--remove-project name="LineageOS/android_bootable_recovery" /-->
+  <remove-project name="LineageOS/android_build" />
+  <!--remove-project name="LineageOS/android_build_soong" /-->
+  <!--remove-project name="LineageOS/android_device_generic_common" /-->
+  <!--remove-project name="LineageOS/android_device_lineage_sepolicy" /-->
+  <!--remove-project name="LineageOS/android_external_bash" /-->
+  <!--remove-project name="platform/external/bouncycastle" /-->
+  <remove-project name="LineageOS/android_external_dng_sdk" />
+  <remove-project name="LineageOS/android_external_google-fonts_google-sans-flex" />
+  <remove-project name="LineageOS/android_external_libjxl" />
+  <remove-project name="LineageOS/android_external_v4l2_codec2" />
+  <remove-project name="LineageOS/android_external_wpa_supplicant_8">
+  <remove-project name="LineageOS/android_frameworks_av" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <remove-project name="LineageOS/android_frameworks_native" />
+  <remove-project name="LineageOS/android_frameworks_opt_telephony" />
+  <!--remove-project name="LineageOS/android_lineage-sdk" /-->
+  <remove-project name="LineageOS/android_hardware_broadcom_libbt" />
+  <remove-project name="LineageOS/android_hardware_interfaces" />
+  <remove-project name="LineageOS/android_hardware_qcom_wlan" />
+  <!--remove-project name="LineageOS/android_packages_apps_Backgrounds" /-->
+  <remove-project name="LineageOS/android_packages_apps_DocumentsUI" />
+  <remove-project name="LineageOS/android_packages_apps_Launcher3" />
+  <!--remove-project name="LineageOS/android_packages_apps_LineageParts" /-->
+  <!--remove-project name="platform/packages/apps/PrivateSpace" /-->
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <!--remove-project name="LineageOS/android_packages_apps_SetupWizard" /-->
+  <remove-project name="LineageOS/android_packages_apps_TvSettings" />
+  <!--remove-project name="LineageOS/android_packages_apps_Twelve" /-->
+  <!--remove-project name="LineageOS/android_packages_apps_Updater" /-->
+  <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
+  <remove-project name="LineageOS/android_packages_modules_Connectivity" />
+  <remove-project name="LineageOS/android_packages_modules_Wifi" />
+  <remove-project name="LineageOS/android_packages_overlays_Lineage" />
+  <remove-project name="LineageOS/android_packages_providers_DownloadProvider" />
+  <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
+  <!--remove-project name="LineageOS/android_packages_services_Car" /-->
+  <remove-project name="LineageOS/android_packages_services_DeviceAsWebcam" />
+  <remove-project name="LineageOS/android_packages_services_Telecomm" />
+  <remove-project name="LineageOS/android_packages_services_Telephony" />
+  <remove-project name="LineageOS/android_system_chre" />
+  <remove-project name="LineageOS/android_system_core" />
+  <remove-project name="LineageOS/android_system_extras" />
+  <remove-project name="LineageOS/android_system_fs_fs_mgr" />
+  <!--remove-project name="platform/system/memory/libmeminfo" /-->
+  <remove-project name="LineageOS/android_system_media" />
+  <remove-project name="LineageOS/android_system_netd" />
+  <remove-project name="LineageOS/android_system_security" />
+  <remove-project name="LineageOS/android_system_sepolicy" />
+  <remove-project name="LineageOS/android_system_update_engine" />
+  <remove-project name="LineageOS/android_system_vold" />
+  <!--remove-project name="LineageOS/android_vendor_lineage" /-->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal-ar" />
+
+  <!-- Our repos -->
+  <project name="bionic" path="bionic" remote="circle" groups="pdk" />
+  <!--project name="bootable_recovery" path="bootable/recovery" remote="circle" groups="pdk" /-->
+  <project name="build_make" path="build/make" remote="circle" groups="pdk,sysui-studio">
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <!--project name="build_soong" path="build/soong" remote="circle" groups="pdk,tradefed,sysui-studio" /-->
+  <!--project name="device_generic_common" path="device/generic/common" remote="circle" groups="pdk" /-->
+  <!--project name="device_lineage_sepolicy" path="device/lineage/sepolicy" remote="circle" /-->
+  <!--project name="external_bash" path="external/bash" remote="circle" /-->
+  <!--project name="external_bouncycastle" path="external/bouncycastle" remote="circle" groups="pdk" /-->
+  <project name="external_devshell" path="external/devshell" remote="circle">
+    <linkfile src="toplevel.envrc" dest=".envrc" />
+  </project>
+  <project path="external/dng_sdk" name="external_dng_sdk" remote="circle" groups="pdk" />
+  <project path="external/libjxl" name="external_libjxl" remote="circle" groups="pdk" />
+  <project path="external/v4l2_codec2" name="external_v4l2_codec2" remote="circle" groups="pdk" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="circle" groups="pdk" />
+  <project name="frameworks_av" path="frameworks/av" remote="circle" groups="pdk,sysui-studio" />
+  <project name="frameworks_base" path="frameworks/base" remote="circle" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <project name="frameworks_native" path="frameworks/native" remote="circle" groups="pdk" />
+  <project name="frameworks_opt_telephony" path="frameworks/opt/telephony" remote="circle" groups="pdk,sysui-studio" />
+  <project name="manifest" path="android" remote="circle" />
+  <!--project name="lineage-sdk" path="lineage-sdk" remote="circle" /-->
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="circle" groups="pdk" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="circle" groups="pdk,sysui-studio" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="circle" groups="qcom,qcom_wlan,pdk-qcom" />
+  <!--project name="packages_apps_Backgrounds" path="packages/apps/Backgrounds" remote="circle" /-->
+  <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" remote="circle" groups="pdk-cw-fs,pdk-fs" />
+  <project name="packages_apps_Launcher3" path="packages/apps/Launcher3" remote="circle" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
+  <!--project name="packages_apps_LineageParts" path="packages/apps/LineageParts" remote="circle" /-->
+  <!--project name="packages_apps_ParanoidSense" path="packages/apps/ParanoidSense" remote="circle" /-->
+  <!--project name="packages_apps_PrivateSpace" path="packages/apps/PrivateSpace" remote="circle" groups="pdk-fs" /-->
+  <project name="packages_apps_Settings" path="packages/apps/Settings" remote="circle" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+  <!--project name="packages_apps_SetupWizard" path="packages/apps/SetupWizard" remote="circle" /-->
+  <project path="packages/apps/TvSettings" name="packages_apps_TvSettings" remote="circle" groups="pdk-fs,pdk-cw-tvc" />
+  <!--project name="packages_apps_Twelve" path="packages/apps/Twelve" remote="circle" /-->
+  <!--project name="packages_apps_Updater" path="packages/apps/Updater" remote="circle" /-->
+  <project name="packages_modules_Bluetooth" path="packages/modules/Bluetooth" remote="circle" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="circle" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="circle" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <project name="packages_overlays_Lineage" path="packages/overlays/Lineage" remote="circle" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="circle" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="circle" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <!--project name="packages_services_Car" path="packages/services/Car" remote="circle" groups="pdk-cw-fs,pdk-fs" /-->
+  <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" remote="circle" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="circle" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="circle" groups="pdk-cw-fs,pdk-fs" />
+  <project path="system/chre" name="system_chre" remote="circle" groups="pdk" />
+  <project name="system_core" path="system/core" remote="circle" groups="pdk" />
+  <project path="system/extras" name="system_extras" remote="circle" groups="pdk" />
+  <project path="system/fs/fs_mgr" name="system_fs_fs_mgr" remote="circle" groups="pdk" />
+  <!--project name="system_memory_libmeminfo" path="system/memory/libmeminfo" remote="circle" groups="pdk" /-->
+  <project path="system/media" name="system_media" remote="circle" groups="pdk" />
+  <project path="system/netd" name="system_netd" remote="circle" groups="pdk" />
+  <project path="system/security" name="system_security" remote="circle" groups="pdk" />
+  <project name="system_sepolicy" path="system/sepolicy" remote="circle" groups="pdk" />
+  <project path="system/update_engine" name="system_update_engine" remote="circle" groups="pdk" />
+  <project path="system/vold" name="system_vold" remote="circle" groups="pdk" />
+  <project name="vendor_circle" path="vendor/circle" remote="circle" />
+  <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal-ar" name="vendor_qcom_opensource_audio-hal_st-hal-ar" remote="circle" groups="qcom,kaanapali-audio" />
+  <!-- The upstream repo is replicated here because our fork only contains the main st-hal-ar instead of the legacy one.
+       However, the remove-project directive doesn't care about paths... -->
+  <project path="vendor/qcom/opensource/audio-hal/st-hal-ar-legacy" name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal-ar" groups="qcom,lanai-audio" revision="lineage-24.0-legacy" />
+
+  <!-- Projects tracked elsewhere -->
+  <project name="CharaROMAndroid/F-DroidPrivilegedExtension" revision="hershey" path="packages/apps/F-DroidPrivilegedExtension" remote="github" />
+</manifest>

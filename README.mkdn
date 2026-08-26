@@ -1,36 +1,106 @@
-LineageOS
-===========
+Project CiRCLE
+==============
 
 Getting started
 ---------------
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+To get started with Android/LineageOS/Project CiRCLE, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+To initialize your local repository using the Project CiRCLE trees, use a command like this:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+repo init -u https://github.com/ProjectCiRCLE-ROM/manifest.git -b 17.0 --git-lfs
 ```
 Then to sync up:
 ```
 repo sync
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
 
-
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
-
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
-
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
-
-
-Buildbot
+Building
 --------
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
+NixOS is primarily preferred to build Project CiRCLE. Our ready-made devshell flake makes it easy to prepare your environment for building.
 
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
+To prepare your environment, you have two options: Using `direnv` and using `nix develop`.
 
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+If you use `direnv`, which you should since we specifically link a `.envrc` file for this purpose, use the following commands to enter the build environment:
+```
+direnv allow
+aosp-env
+```
+
+Note that you have to run `direnv allow` only once, then you can just `cd` into the build root and run `aosp-env` in subsequent shell sessions.
+
+If you don't use `direnv`, you can run the following command to enter the build environment:
+```
+nix develop path:external/devshell
+```
+
+You have to run this command every time you want to enter the build environment, so you better save it somewhere!
+
+> [!NOTE]
+> If you, for some reason, cannot afford to have Nix on your machine, check out the `REQUIREMENTS.mkdn` file in this repository to get the required packages for your distribution.
+
+After you enter the build environment (or prepare the distro of your choice for building), use the following command to gather the functions required and run the `vendorsetup` scripts from your device trees:
+```
+source build/envsetup.sh
+```
+
+And then, to populate your environment with variables needed for your specific device:
+```
+lunch circle_$device-bp4a-userdebug
+```
+
+Finally, to start building:
+```
+m live
+```
+
+Flags
+-----
+
+There are flags you can use to customize your build however you like.
+
+To label your builds as experimental or unofficial:
+```
+CIRCLE_BUILDTYPE := EXPERIMENTAL | UNOFFICIAL
+```
+
+The builds are labeled unofficial by default (if the variable is empty or has an unrecognized definition).
+
+To ship Google apps:
+```
+WITH_GMS := true
+```
+
+To set your alias as the maintainer:
+```
+CIRCLE_MAINTAINER := username
+```
+
+Make sure not to use spaces as this is passed to `PRODUCT_PRODUCT_PROPERTIES` as is. If you put space, only the content before first space is taken into consideration, and it will also mess up build.prop, like so:
+```
+# CIRCLE_MAINTAINER := First Last
+ro.circle.maintainer=First
+Last
+```
+
+If your device has a Mediatek chipset, the following flag might be useful for you:
+```
+PERF_ANIM_OVERRIDE := true
+```
+
+This flag works around a performance regression caused by fixed DP translations and fade animations.
+
+Credits
+-------
+
+- **[Project Kasumi](https://github.com/ProjectKasumi) Community:** The idea and the driving force
+- **[LineageOS](https://github.com/LineageOS):** Base ROM
+- **[halogenOS](https://git.halogenos.org/halogenOS):** Base Nix devshell
+- **[DivestOS](https://github.com/Divested-Mobile):** Patches to nuke analytics
+- **[Project Sakura](https://github.com/ProjectSakura):** Some design ideas and specific features
+- **[Halcyon](https://github.com/halcyonproject):** Specific features
+- **[The Clover Project](https://github.com/The-Clover-Project):** Specific features and fonts
+- **[crDroid](https://github.com/crdroidandroid):** Specific fixes and improvements
+- **[AxionOS](https://github.com/AxionAOSP):** Specific fixes and improvements
+- **[LineageOS-Ext](https://github.com/Los-Ext):** Specific fixes and improvements
